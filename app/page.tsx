@@ -7,6 +7,8 @@ import Link from "next/link";
 import { technologies } from "@/data/technologies";
 import { projects } from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";
+import { jobs } from "@/data/Jobs";
+import JobCard from "@/components/JobCard";
 
 export default function Home() {
   return (
@@ -93,8 +95,13 @@ export default function Home() {
             ))}
           </div>
         </section>
-        <section id="experiences">
+        <section id="experiences" className="w-full">
           <h3 className="text-3xl mb-3.5">Experiências</h3>
+          <div className="flex flex-col gap-4 w-full">
+            {jobs.map((j, index) => (
+              <JobCard props={j} key={index} />
+            ))}
+          </div>
         </section>
       </main>
     </div>
