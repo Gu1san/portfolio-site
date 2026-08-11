@@ -1,68 +1,101 @@
+import Button from "@/components/Button";
+import Header from "@/components/Header";
+import TechIcon from "@/components/TechIcon";
+import { SiGithub, SiLinkerd } from "@icons-pack/react-simple-icons";
 import Image from "next/image";
+import Link from "next/link";
+import { technologies } from "@/data/technologies";
+import { projects } from "@/data/projects";
+import ProjectCard from "@/components/ProjectCard";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <div className="flex flex-col flex-1 items-center justify-center bg-background font-sans">
+      <Header />
+      <main className="flex flex-1 w-full px-2  max-w-7xl flex-col items-center justify-between py-32 sm:items-start md:px-3">
+        <section
+          id="home"
+          className="flex flex-col w-full items-center justify-center gap-3 mb-10"
+        >
+          <p className="text-sm">Belo Horizonte, Brasil</p>
+          <h1 className="text-4xl text-center">Guilherme Cesário</h1>
+          <h2>Desenvolvedor Full-Stack</h2>
+          <div className="flex w-full gap-5 center justify-center items-center">
+            <Button text="Baixar currículo" link={""} />
+            <Button text="Linkedin" link={""} />
+          </div>
+        </section>
+        <section id="about" className="flex items-center justify-between my-15">
+          <div className="flex flex-col gap-3.5">
+            <h3 className="text-3xl">Sobre mim</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.
+            </p>
+          </div>
+          <div className=" flex flex-col gap-2.5 ml-7 h-full">
             <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
+              src="/foto_perfil.jpg"
+              width={400}
+              height={400}
+              alt="Foto de perfil"
+              className="rounded-full"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+            <nav
+              aria-label="Redes sociais"
+              className="flex items-center justify-center gap-3.5"
+            >
+              <Link
+                href="https://github.com/Gu1san"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <SiGithub size={20} />
+              </Link>
+
+              <Link
+                href="https://linkedin.com/in/seu-usuario"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <SiLinkerd size={20} />
+              </Link>
+            </nav>
+          </div>
+        </section>
+        <section id="technologies" className="mb-15">
+          <h3 className="text-3xl">Tecnologias</h3>
+          <p>Ferramentas de trabalho que uso em meus projetos</p>
+          <div className="flex flex-1 flex-wrap gap-2 mt-3.5">
+            {technologies.map(({ id, name, icon: Icon }) => (
+              <TechIcon icon={<Icon size={15} />} name={name} key={id} />
+            ))}
+          </div>
+        </section>
+        <section id="projects" className="mb-15 w-full">
+          <h3 className="text-3xl mb-3.5">Projetos</h3>
+          <div className="flex flex-wrap justify-center items-center gap-x-20 gap-y-10">
+            {projects.map((p, index) => (
+              <ProjectCard
+                slug={p.slug}
+                title={p.title}
+                description={p.description}
+                image={p.image}
+                technologies={p.technologies}
+                key={index}
+              />
+            ))}
+          </div>
+        </section>
+        <section id="experiences">
+          <h3 className="text-3xl mb-3.5">Experiências</h3>
+        </section>
       </main>
     </div>
   );
