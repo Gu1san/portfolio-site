@@ -31,3 +31,12 @@ export type Job = {
   end_date: Date | "Atualmente";
   topics: string[];
 };
+
+export type Education = {
+  title: string;
+  degree: string;
+  institution: string;
+  description: string;
+  start_date: Date;
+  end_date: Date | "Atualmente";
+};
