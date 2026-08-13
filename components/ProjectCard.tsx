@@ -5,9 +5,9 @@ import TechIcon from "./TechIcon";
 import { ExternalLink } from "lucide-react";
 import { technologies } from "@/data/technologies";
 
-export default function ProjectCard(props: Project) {
+export default function ProjectCard({ props }: { props: Project }) {
   return (
-    <Link href={`/${props.slug}`}>
+    <Link href={props.repository} target="_blank">
       <div className="group flex flex-col bg-background-secondary justify-between p-3 rounded-2xl h-96 max-w-sm hover:-translate-y-2 hover:bg-hover transition-all">
         <div>
           <Image

@@ -8,7 +8,7 @@ export const projects: Project[] = [
     description: "Gerenciador pessoal de finanças",
     readme: "",
     image: "/projects/finance_manager.png",
-    repository: "",
+    repository: "https://github.com/Gu1san/Finance-Manager-Frontend",
     technologies: [
       "react",
       "nextjs",
@@ -25,7 +25,7 @@ export const projects: Project[] = [
     description: "Gerenciador pessoal de finanças",
     readme: "",
     image: "/projects/finance_manager.png",
-    repository: "",
+    repository: "https://github.com/Gu1san/Finance-Manager-Frontend",
     technologies: [
       "react",
       "nextjs",
@@ -42,7 +42,7 @@ export const projects: Project[] = [
     description: "Gerenciador pessoal de finanças",
     readme: "",
     image: "/projects/finance_manager.png",
-    repository: "",
+    repository: "https://github.com/Gu1san/Finance-Manager-Frontend",
     technologies: [
       "react",
       "nextjs",

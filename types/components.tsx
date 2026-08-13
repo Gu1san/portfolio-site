@@ -18,7 +18,7 @@ export type Project = {
   description: string;
   readme?: string;
   image: string;
-  repository?: string;
+  repository: string;
   deploy?: string;
   technologies: Technologies["id"][];
 };

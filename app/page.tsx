@@ -87,14 +87,7 @@ export default function Home() {
           <h3 className="text-3xl mb-3.5">Projetos</h3>
           <div className="flex flex-wrap justify-center items-center gap-x-20 gap-y-10">
             {projects.map((p, index) => (
-              <ProjectCard
-                slug={p.slug}
-                title={p.title}
-                description={p.description}
-                image={p.image}
-                technologies={p.technologies}
-                key={index}
-              />
+              <ProjectCard props={p} key={index} />
             ))}
           </div>
         </section>
