@@ -1,7 +1,6 @@
 import Button from "@/components/Button";
 import Header from "@/components/Header";
 import TechIcon from "@/components/TechIcon";
-import { SiGithub, SiLinkerd } from "@icons-pack/react-simple-icons";
 import Image from "next/image";
 import Link from "next/link";
 import { technologies } from "@/data/technologies";
@@ -11,12 +10,15 @@ import JobCard from "@/components/JobCard";
 import { jobs } from "@/data/jobs";
 import { education } from "@/data/education";
 import EducationItem from "@/components/EducationItem";
+import Footer from "@/components/Footer";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-background font-sans">
       <Header />
-      <main className="flex flex-1 w-full px-2  max-w-7xl flex-col items-center justify-between py-32 sm:items-start md:px-3">
+      <main className="flex flex-1 w-full px-2  max-w-7xl flex-col items-center justify-between pt-32 sm:items-start md:px-3">
         <section
           id="home"
           className="flex flex-col w-full items-center justify-center gap-3 mb-10"
@@ -53,22 +55,21 @@ export default function Home() {
               aria-label="Redes sociais"
               className="flex items-center justify-center gap-3.5"
             >
-              <Link
-                href="https://github.com/Gu1san"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-              >
-                <SiGithub size={20} />
+              <Link href={"https://github.com/Gu1san"}>
+                <GitHubIcon
+                  className="text-foreground-muted hover:text-foreground transition-all"
+                  sx={{ fontSize: 29 }}
+                />
               </Link>
-
               <Link
-                href="https://linkedin.com/in/seu-usuario"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
+                href={
+                  "https://www.linkedin.com/in/guilherme-cesário-b5138221a/"
+                }
               >
-                <SiLinkerd size={20} />
+                <LinkedInIcon
+                  className="text-foreground-muted hover:text-foreground transition-all"
+                  sx={{ fontSize: 30 }}
+                />
               </Link>
             </nav>
           </div>
@@ -108,7 +109,7 @@ export default function Home() {
         <section id="education" className="mb-15 w-full">
           <h3 className="text-3xl mb-3.5">Educação</h3>
           <div className="relative">
-            <div className="absolute left-22 md:left-40 w-2 top-3 bottom-0 bg-background-secondary"></div>
+            <div className="absolute left-22 md:left-40 w-2 top-3 bottom-0 bg-background-secondary rounded-full"></div>
             <div className="flex flex-col gap-4 w-full">
               {education.map((e, index) => (
                 <EducationItem props={e} key={index} />
@@ -116,6 +117,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <Footer />
       </main>
     </div>
   );

@@ -13,7 +13,7 @@ export default function TechIcon({
 }: TechIconProps) {
   return (
     <div
-      className={`flex w-auto items-center gap-2 bg-background-${background} ${showName ? "py-0.5" : "py-1.5"} px-1.5 rounded-full`}
+      className={`flex w-auto items-center gap-2 bg-background-${background} ${showName ? "py-0.5" : "py-1.5"} px-1.5 rounded-full group-hover:bg-hover-secondary group-hover:shadow transition`}
     >
       {icon}
       {showName && <span className="text-sm">{name}</span>}

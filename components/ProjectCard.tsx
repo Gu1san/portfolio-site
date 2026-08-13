@@ -8,7 +8,7 @@ import { technologies } from "@/data/technologies";
 export default function ProjectCard(props: Project) {
   return (
     <Link href={`/${props.slug}`}>
-      <div className="flex flex-col bg-background-secondary justify-between p-3 rounded-2xl h-96 max-w-sm">
+      <div className="group flex flex-col bg-background-secondary justify-between p-3 rounded-2xl h-96 max-w-sm hover:-translate-y-2 hover:bg-hover transition-all">
         <div>
           <Image
             src={props.image}
