@@ -4,6 +4,8 @@ import { Url } from "next/dist/shared/lib/router/router";
 export type ButtonProps = {
   link: Url | string;
   text: string;
+  textStyle?: string;
+  containerStyle?: string;
 };
 
 export type Technologies = {

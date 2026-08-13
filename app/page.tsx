@@ -16,7 +16,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-background font-sans">
+    <div className="flex flex-col flex-1 items-center justify-center font-sans">
       <Header />
       <main className="flex flex-1 w-full px-2  max-w-7xl flex-col items-center justify-between pt-32 sm:items-start md:px-3">
         <section
@@ -24,10 +24,16 @@ export default function Home() {
           className="flex flex-col w-full items-center justify-center gap-3 mb-10"
         >
           <p className="text-sm">Belo Horizonte, Brasil</p>
-          <h1 className="text-4xl text-center">Guilherme Cesário</h1>
+          <h1 className="text-5xl font-bold text-center text-brand">
+            Guilherme Cesário
+          </h1>
           <h2>Desenvolvedor Full-Stack</h2>
           <div className="flex w-full gap-5 center justify-center items-center">
-            <Button text="Baixar currículo" link={""} />
+            <Button
+              text="Baixar currículo"
+              link={""}
+              containerStyle="bg-brand-secondary"
+            />
             <Button text="Linkedin" link={""} />
           </div>
         </section>
@@ -49,7 +55,7 @@ export default function Home() {
               width={400}
               height={400}
               alt="Foto de perfil"
-              className="rounded-full"
+              className="rounded-full border-2 border-foreground"
             />
             <nav
               aria-label="Redes sociais"
@@ -57,7 +63,7 @@ export default function Home() {
             >
               <Link href={"https://github.com/Gu1san"}>
                 <GitHubIcon
-                  className="text-foreground-muted hover:text-foreground transition-all"
+                  className="text-foreground-muted hover:text-brand-hover transition-all"
                   sx={{ fontSize: 29 }}
                 />
               </Link>
@@ -67,7 +73,7 @@ export default function Home() {
                 }
               >
                 <LinkedInIcon
-                  className="text-foreground-muted hover:text-foreground transition-all"
+                  className="text-foreground-muted hover:text-brand-hover transition-all"
                   sx={{ fontSize: 30 }}
                 />
               </Link>

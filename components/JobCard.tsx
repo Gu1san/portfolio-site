@@ -11,7 +11,7 @@ export default function JobCard({ props }: { props: Job }) {
 
   return (
     <div className="flex w-full flex-row items-start gap-5">
-      <div className="relative size-30 shrink-0 overflow-hidden rounded-md">
+      <div className="relative size-30 shrink-0 overflow-hidden rounded-md ">
         <Image
           src={props.image}
           alt={`Logo da empresa ${props.company}`}
@@ -50,7 +50,7 @@ export default function JobCard({ props }: { props: Job }) {
         </div>
 
         <ChevronDown
-          className={`ml-4 shrink-0 transition-transform duration-500 ${
+          className={`ml-4 shrink-0 transition-transform duration-500 text-brand ${
             open ? "rotate-180" : ""
           }`}
         />
