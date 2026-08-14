@@ -6,7 +6,8 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-1 w-full justify-between items-center px-3.5 py-10 border-t border-brand">
+    <footer className="flex relative flex-1 w-full justify-between items-center px-3.5 py-10">
+      <div className="absolute top-0 h-px w-full bg-linear-to-r from-transparent via-brand to-transparent mb-12"></div>
       <p>© 2026 Guilherme Cesário.</p>
       <nav className="flex justify-between gap-3.5 items-center">
         <Link href={"https://github.com/Gu1san"}>
