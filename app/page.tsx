@@ -13,6 +13,7 @@ import EducationItem from "@/components/EducationItem";
 import Footer from "@/components/Footer";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import SectionTitle from "@/components/SectionTitle";
 
 export default function Home() {
   return (
@@ -32,14 +33,14 @@ export default function Home() {
             <Button
               text="Baixar currículo"
               link={""}
-              containerStyle="bg-brand-secondary"
+              containerStyle="bg-brand-secondary font-semibold"
             />
-            <Button text="Linkedin" link={""} />
+            <Button text="Linkedin" link={""} containerStyle="font-semibold" />
           </div>
         </section>
         <section id="about" className="flex items-center justify-between my-15">
-          <div className="flex flex-col gap-3.5">
-            <h3 className="text-3xl">Sobre mim</h3>
+          <div className="flex flex-col">
+            <SectionTitle>Sobre mim</SectionTitle>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -81,8 +82,8 @@ export default function Home() {
           </div>
         </section>
         <section id="technologies" className="mb-15">
-          <h3 className="text-3xl">Tecnologias</h3>
-          <p>Ferramentas de trabalho que uso em meus projetos</p>
+          <SectionTitle>Tecnologias</SectionTitle>
+
           <div className="flex flex-1 flex-wrap gap-2 mt-3.5">
             {technologies.map(({ id, name, icon: Icon }) => (
               <TechIcon icon={<Icon size={15} />} name={name} key={id} />
@@ -90,7 +91,7 @@ export default function Home() {
           </div>
         </section>
         <section id="projects" className="mb-15 w-full">
-          <h3 className="text-3xl mb-3.5">Projetos</h3>
+          <SectionTitle>Projetos</SectionTitle>
           <div className="flex flex-wrap justify-center items-center gap-x-20 gap-y-10">
             {projects.map((p, index) => (
               <ProjectCard props={p} key={index} />
@@ -98,7 +99,7 @@ export default function Home() {
           </div>
         </section>
         <section id="experiences" className="mb-15 w-full">
-          <h3 className="text-3xl mb-3.5">Experiências</h3>
+          <SectionTitle>Experiências</SectionTitle>
           <div className="flex flex-col gap-4 w-full">
             {jobs.map((j, index) => (
               <JobCard props={j} key={index} />
@@ -106,7 +107,7 @@ export default function Home() {
           </div>
         </section>
         <section id="education" className="mb-15 w-full">
-          <h3 className="text-3xl mb-3.5">Educação</h3>
+          <SectionTitle>Educação</SectionTitle>
           <div className="relative">
             <div className="absolute left-22 md:left-40 w-2 top-3 bottom-0 bg-background-secondary rounded-full"></div>
             <div className="flex flex-col gap-4 w-full">

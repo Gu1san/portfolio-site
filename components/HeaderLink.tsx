@@ -5,7 +5,7 @@ export default function HeaderLink({ link, text }: ButtonProps) {
   return (
     <Link
       href={link}
-      className="transparent rounded-xl py-1 px-2 hover:bg-background transition"
+      className="transparent rounded-xl py-1 px-2 font-semibold hover:bg-brand transition"
     >
       {text}
     </Link>

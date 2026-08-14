@@ -21,7 +21,7 @@
      HOVER
      ======================================== */
 
-  --hover: #e4e4e7;
+  --hover: #dedee0;
   --hover-secondary: #d4d4d8;
 
   /* ========================================
@@ -32,7 +32,7 @@
   --brand-hover: #0052cc;
   --brand-active: #003d99;
 
-  --brand-secondary: #3385ff;
+  --brand-secondary: #4d94ff;
   --brand-muted: #cce0ff;
   --brand-background: #e5f0ff;
 }
