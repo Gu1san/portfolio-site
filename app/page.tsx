@@ -14,6 +14,7 @@ import Footer from "@/components/Footer";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import SectionTitle from "@/components/SectionTitle";
+import BackgroundGradient from "@/components/BackgroundGradient";
 
 export default function Home() {
   return (
@@ -24,6 +25,11 @@ export default function Home() {
           id="home"
           className="flex flex-col w-full items-center justify-center gap-3 mb-10"
         >
+          <BackgroundGradient
+            offset={"-11"}
+            colors={["brand-secondary", "brand-active"]}
+            rotation={30}
+          />
           <p className="text-sm">Belo Horizonte, Brasil</p>
           <h1 className="text-5xl font-bold text-center text-brand">
             Guilherme Cesário
@@ -81,9 +87,9 @@ export default function Home() {
             </nav>
           </div>
         </section>
-        <section id="technologies" className="mb-15">
+        <section id="technologies" className="relative mb-15">
           <SectionTitle>Tecnologias</SectionTitle>
-
+          <BackgroundGradient offset={"+3"} colors={["brand", "brand-muted"]} />
           <div className="flex flex-1 flex-wrap gap-2 mt-3.5">
             {technologies.map(({ id, name, icon: Icon }) => (
               <TechIcon icon={<Icon size={15} />} name={name} key={id} />
@@ -100,16 +106,22 @@ export default function Home() {
         </section>
         <section id="experiences" className="mb-15 w-full">
           <SectionTitle>Experiências</SectionTitle>
+
           <div className="flex flex-col gap-4 w-full">
             {jobs.map((j, index) => (
               <JobCard props={j} key={index} />
             ))}
           </div>
         </section>
-        <section id="education" className="mb-15 w-full">
+        <section id="education" className="relative mb-15 w-full">
           <SectionTitle>Educação</SectionTitle>
+          <BackgroundGradient
+            offset={"-11"}
+            colors={["brand-secondary", "brand-active"]}
+            rotation={30}
+          />
           <div className="relative">
-            <div className="absolute left-22 md:left-40 w-2 top-3 bottom-0 bg-background-secondary rounded-full"></div>
+            <div className="absolute left-22 md:left-40 w-2 top-3 bottom-0 bg-background-tertiary rounded-full"></div>
             <div className="flex flex-col gap-4 w-full">
               {education.map((e, index) => (
                 <EducationItem props={e} key={index} />

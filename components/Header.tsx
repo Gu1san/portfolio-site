@@ -18,7 +18,7 @@ import DialogButton from "./DialogButton";
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
-    <header className="absolute top-0 lg:top-3.5 flex flex-row justify-between align-center bg-background-tertiary/50 border-b lg:border border-brand lg:rounded-3xl w-full lg:w-2/3 max-h-16 py-4 px-3">
+    <header className="absolute top-0 lg:top-3.5 flex flex-row justify-between align-center bg-background-tertiary/55 border-b lg:border border-brand lg:rounded-3xl w-full lg:w-2/3 max-h-16 py-4 px-3">
       <nav className="flex flex-1 flex-row justify-between gap-3">
         <a className="flex items-center justify-between">
           <span className="sr-only">Guilherme Logo</span>
