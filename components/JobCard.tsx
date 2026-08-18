@@ -1,6 +1,7 @@
 "use client";
 
 import { Job } from "@/types/components";
+import { formatDate } from "@/utils";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
@@ -8,19 +9,9 @@ import { useState } from "react";
 export default function JobCard({ props }: { props: Job }) {
   const [open, setOpen] = useState(false);
 
-  const formatDate = (date: Date | "Atualmente") => {
-    if (date === "Atualmente") return date;
-
-    return date.toLocaleDateString("pt-BR", {
-      month: "2-digit",
-      year: "numeric",
-    });
-  };
-
   return (
     <div className="flex w-full flex-row items-start gap-5">
-      {/* Imagem */}
-      <div className="relative size-30 shrink-0 overflow-hidden rounded-md">
+      <div className="relative size-30 shrink-0 overflow-hidden rounded-md ">
         <Image
           src={props.image}
           alt={`Logo da empresa ${props.company}`}
@@ -30,7 +21,6 @@ export default function JobCard({ props }: { props: Job }) {
         />
       </div>
 
-      {/* Conteúdo expansível */}
       <div
         onClick={() => setOpen((prev) => !prev)}
         className="flex w-full min-h-30 cursor-pointer flex-row items-center justify-between rounded-md bg-background-secondary px-3.5 py-5 transition-colors duration-200 hover:bg-hover"
@@ -60,7 +50,7 @@ export default function JobCard({ props }: { props: Job }) {
         </div>
 
         <ChevronDown
-          className={`ml-4 shrink-0 transition-transform duration-500 ${
+          className={`ml-4 shrink-0 transition-transform duration-500 text-brand ${
             open ? "rotate-180" : ""
           }`}
         />

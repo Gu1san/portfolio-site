@@ -2,7 +2,7 @@ import { Job } from "@/types/components";
 
 export const jobs: Job[] = [
   {
-    image: "/projects/finance_manager.png",
+    image: "/jobs/freelance.jpg",
     company: "Freelancer",
     role: "Desenvolvedor Full Stack",
     start_date: new Date(2023, 0, 1),
@@ -13,12 +13,11 @@ export const jobs: Job[] = [
       "Modelagem, manipulação e consulta de bancos de dados relacionais (PostgreSQL), incluindo criação de queries e suporte à persistência de dados.",
       "Desenvolvimento e manutenção de código limpo e escalável, aplicando boas práticas de programação, organização de projetos e padrões de desenvolvimento.",
       "Versionamento e controle de código com Git, colaborando em fluxos de trabalho baseados em metodologias ágeis (Scrum).",
-      "Participação em ciclos de desenvolvimento colaborativo, contribuindo para análise de requisitos, implementação de funcionalidades e melhoria contínua das aplicações.",
       "Atuação em treinamento e curadoria de dados para modelos de IA generativa, contribuindo para melhoria da qualidade de respostas e alinhamento semântico de sistemas inteligentes.",
     ],
   },
   {
-    image: "/projects/finance_manager.png",
+    image: "/jobs/ufmg.png",
     company: "UFMG",
     role: "Suporte de TI",
     start_date: new Date(2024, 11, 1),
@@ -32,8 +31,8 @@ export const jobs: Job[] = [
     ],
   },
   {
-    image: "/projects/finance_manager.png",
-    company: "Mobradio",
+    image: "/jobs/mobradio.png",
+    company: "MobRádio",
     role: "Desenvolvedor React Native",
     start_date: new Date(2022, 6, 1),
     end_date: new Date(2024, 5, 1),

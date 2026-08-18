@@ -4,6 +4,8 @@ import { Url } from "next/dist/shared/lib/router/router";
 export type ButtonProps = {
   link: Url | string;
   text: string;
+  textStyle?: string;
+  containerStyle?: string;
 };
 
 export type Technologies = {
@@ -18,7 +20,7 @@ export type Project = {
   description: string;
   readme?: string;
   image: string;
-  repository?: string;
+  repository: string;
   deploy?: string;
   technologies: Technologies["id"][];
 };
@@ -30,4 +32,13 @@ export type Job = {
   start_date: Date;
   end_date: Date | "Atualmente";
   topics: string[];
+};
+
+export type Education = {
+  title: string;
+  degree: string;
+  institution: string;
+  description: string;
+  start_date: Date;
+  end_date: Date | "Atualmente";
 };

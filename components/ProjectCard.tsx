@@ -5,10 +5,10 @@ import TechIcon from "./TechIcon";
 import { ExternalLink } from "lucide-react";
 import { technologies } from "@/data/technologies";
 
-export default function ProjectCard(props: Project) {
+export default function ProjectCard({ props }: { props: Project }) {
   return (
-    <Link href={`/${props.slug}`}>
-      <div className="flex flex-col bg-background-secondary justify-between p-3 rounded-2xl h-96 max-w-sm">
+    <Link href={props.repository} target="_blank">
+      <div className="group flex flex-col bg-background-secondary justify-between p-3 rounded-2xl h-96 max-w-sm shadow-sm shadow-foreground/25 hover:-translate-y-1 hover:bg-hover hover:shadow-md transition-all">
         <div>
           <Image
             src={props.image}
@@ -40,8 +40,8 @@ export default function ProjectCard(props: Project) {
           </div>
           <p>{props.description}</p>
         </div>
-        <p className="flex gap-0.5 items-center bold mt-2">
-          Ver mais <ExternalLink />
+        <p className="flex gap-0.5 items-center bold mt-2 group-hover:text-brand">
+          Ver mais <ExternalLink className="group-hover:text-brand" />
         </p>
       </div>
     </Link>
