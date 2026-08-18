@@ -10,19 +10,22 @@ export default function Footer() {
       <div className="absolute top-0 h-px w-full bg-linear-to-r from-transparent via-brand to-transparent mb-12"></div>
       <p>© 2026 Guilherme Cesário.</p>
       <nav className="flex justify-between gap-3.5 items-center">
-        <Link href={"https://github.com/Gu1san"}>
+        <Link target="_blank" href={"https://github.com/Gu1san"}>
           <GitHubIcon
             className="text-foreground-muted hover:text-foreground transition-all"
             sx={{ fontSize: 35 }}
           />
         </Link>
-        <Link href={"mailto:guilhermecesario1808@gmail.com"}>
+        <Link target="_blank" href={"mailto:guilhermecesario1808@gmail.com"}>
           <EmailIcon
             className="text-foreground-muted hover:text-foreground transition-all"
             sx={{ fontSize: 40 }}
           />
         </Link>
-        <Link href={"https://www.linkedin.com/in/guilherme-cesário-b5138221a/"}>
+        <Link
+          target="_blank"
+          href={"https://www.linkedin.com/in/guilherme-cesário-b5138221a/"}
+        >
           <LinkedInIcon
             className="text-foreground-muted hover:text-foreground transition-all"
             sx={{ fontSize: 40 }}

@@ -10,6 +10,7 @@ export default function Button({
   return (
     <Link
       href={link}
+      target="_blank"
       className={`flex justify-center bg-background-secondary min-w-36 rounded-md py-1 shadow-sm/25 shadow-foreground transition hover:shadow-brand-active hover:shadow-sm/100 ${containerStyle}`}
     >
       {text}

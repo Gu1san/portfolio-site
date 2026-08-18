@@ -14,20 +14,20 @@ import {
   PopoverPanel,
 } from "@headlessui/react";
 import DialogButton from "./DialogButton";
+import Link from "next/link";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
-    <header className="absolute top-0 lg:top-3.5 flex flex-row justify-between align-center bg-background-tertiary/55 border-b lg:border border-brand lg:rounded-3xl w-full lg:w-2/3 max-h-16 py-4 px-3">
+    <header className="fixed top-0 backdrop-blur-md z-50 self-center lg:top-3.5 flex flex-row justify-between align-center bg-background-tertiary/55 border-b lg:border border-brand lg:rounded-3xl w-full lg:w-2/3 max-h-16 py-4 px-3">
       <nav className="flex flex-1 flex-row justify-between gap-3">
-        <a className="flex items-center justify-between">
+        <Link
+          href={"#"}
+          className="flex items-center justify-between cursor-pointer"
+        >
           <span className="sr-only">Guilherme Logo</span>
-          <img
-            alt=""
-            src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-            className="h-8 w-auto"
-          />
-        </a>
+          <span className="text-brand font-bold text-4xl">GC</span>
+        </Link>
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -53,8 +53,8 @@ export default function Header() {
               transition
               className="absolute flex flex-col left-1/2 z-10 gap-2 p-2.5 mt-5 max-w-md -translate-x-1/2 overflow-hidden rounded-2xl bg-background-secondary outline-1 -outline-offset-1 outline-white/10 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
             >
-              <HeaderLink link={"#experiences"} text="Experiências" />
-              <HeaderLink link={"#experiences"} text="Experiências" />
+              <HeaderLink link={"#experiences"} text="Profissional" />
+              <HeaderLink link={"#education"} text="Acadêmico" />
             </PopoverPanel>
           </Popover>
         </PopoverGroup>
@@ -69,11 +69,7 @@ export default function Header() {
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Guilherme Logo</span>
-              <img
-                alt=""
-                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                className="h-8 w-auto"
-              />
+              <span className="text-brand font-bold text-4xl">GC</span>
             </a>
             <button
               type="button"
