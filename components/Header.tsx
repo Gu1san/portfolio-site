@@ -22,7 +22,7 @@ export default function Header() {
     <header className="fixed top-0 backdrop-blur-md z-50 self-center lg:top-3.5 flex flex-row justify-between align-center bg-background-tertiary/55 border-b lg:border border-brand lg:rounded-3xl w-full lg:w-2/3 max-h-16 py-4 px-3">
       <nav className="flex flex-1 flex-row justify-between gap-3">
         <Link
-          href={"#"}
+          href="#"
           className="flex items-center justify-between cursor-pointer"
         >
           <span className="sr-only">Guilherme Logo</span>
@@ -67,10 +67,10 @@ export default function Header() {
         <div className="fixed inset-0 z-50" />
         <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-background-secondary p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
+            <Link href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Guilherme Logo</span>
               <span className="text-brand font-bold text-4xl">GC</span>
-            </a>
+            </Link>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
@@ -84,9 +84,9 @@ export default function Header() {
             <div className="-my-6 divide-y divide-white/10">
               <div className="space-y-2 py-6">
                 <DialogButton link="#">Início</DialogButton>
-                <DialogButton link="#">Sobre</DialogButton>
-                <DialogButton link="#">Tecnologias</DialogButton>
-                <DialogButton link="#">Projetos</DialogButton>
+                <DialogButton link="#about">Sobre</DialogButton>
+                <DialogButton link="#technologies">Tecnologias</DialogButton>
+                <DialogButton link="#projects">Projetos</DialogButton>
 
                 <Disclosure as="div" className="-mx-3">
                   <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-foreground hover:bg-hover">
@@ -99,14 +99,14 @@ export default function Header() {
                   <DisclosurePanel className="mt-2 space-y-2">
                     <DisclosureButton
                       as="a"
-                      href={""}
+                      href={"#experiences"}
                       className="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-foreground hover:bg-hover"
                     >
                       Profissional
                     </DisclosureButton>
                     <DisclosureButton
                       as="a"
-                      href={""}
+                      href={"#education"}
                       className="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-foreground hover:bg-hover"
                     >
                       Acadêmico
