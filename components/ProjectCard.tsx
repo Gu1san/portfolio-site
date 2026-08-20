@@ -8,14 +8,14 @@ import { technologies } from "@/data/technologies";
 export default function ProjectCard({ props }: { props: Project }) {
   return (
     <Link href={props.repository} target="_blank">
-      <div className="group flex flex-col bg-background-secondary justify-between p-3 rounded-2xl h-96 max-w-sm shadow-sm shadow-foreground/25 hover:-translate-y-1 hover:bg-hover hover:shadow-md transition-all">
+      <div className="group flex flex-col bg-background-secondary justify-between p-3 rounded-2xl h-96 w-xs shadow-sm shadow-foreground/25 hover:-translate-y-1 hover:bg-hover hover:shadow-md transition-all">
         <div>
           <Image
             src={props.image}
             alt="Capa do projeto"
             width={300}
             height={250}
-            className="rounded-xl h-40"
+            className="rounded-xl h-40 "
           />
 
           <h4 className="text-lg font-bold my-2">{props.title}</h4>

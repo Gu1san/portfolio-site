@@ -18,6 +18,7 @@ import {
   SiWebpack,
   SiFigma,
   SiCss,
+  SiJest,
 } from "@icons-pack/react-simple-icons";
 
 export const technologies: Technologies[] = [
@@ -55,6 +56,11 @@ export const technologies: Technologies[] = [
     id: "tailwindcss",
     name: "Tailwind CSS",
     icon: SiTailwindcss,
+  },
+  {
+    id: "jest",
+    name: "Jest",
+    icon: SiJest,
   },
   {
     id: "nodejs",
