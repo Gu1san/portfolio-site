@@ -15,10 +15,10 @@ export default function ProjectCard({ props }: { props: Project }) {
             alt="Capa do projeto"
             width={300}
             height={250}
-            className="rounded-xl"
+            className="rounded-xl h-40"
           />
 
-          <h4 className="text-lg my-2">{props.title}</h4>
+          <h4 className="text-lg font-bold my-2">{props.title}</h4>
           <div className="flex flex-wrap gap-2 mb-2">
             {props.technologies.map((id) => {
               const tech = technologies.find((t) => t.id === id);
