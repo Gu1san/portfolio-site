@@ -1,20 +1,20 @@
-import Button from "@/components/Button";
-import Header from "@/components/Header";
-import TechIcon from "@/components/TechIcon";
-import Image from "next/image";
-import Link from "next/link";
-import { technologies } from "@/data/technologies";
-import { projects } from "@/data/projects";
-import ProjectCard from "@/components/ProjectCard";
-import JobCard from "@/components/JobCard";
-import { jobs } from "@/data/jobs";
-import { education } from "@/data/education";
-import EducationItem from "@/components/EducationItem";
-import Footer from "@/components/Footer";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import SectionTitle from "@/components/SectionTitle";
-import BackgroundGradient from "@/components/BackgroundGradient";
+import Button from '@/components/Button';
+import Header from '@/components/Header';
+import TechIcon from '@/components/TechIcon';
+import Image from 'next/image';
+import Link from 'next/link';
+import { technologies } from '@/data/technologies';
+import { projects } from '@/data/projects';
+import ProjectCard from '@/components/ProjectCard';
+import JobCard from '@/components/JobCard';
+import { jobs } from '@/data/jobs';
+import { education } from '@/data/education';
+import EducationItem from '@/components/EducationItem';
+import Footer from '@/components/Footer';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import SectionTitle from '@/components/SectionTitle';
+import BackgroundGradient from '@/components/BackgroundGradient';
 
 export default function Home() {
   return (
@@ -39,13 +39,13 @@ export default function Home() {
             <div className="flex w-full gap-5 center justify-center items-center">
               <Button
                 text="Baixar currículo"
-                link={""}
+                link={'./resume/CV_FullStack.pdf'}
                 containerStyle="bg-brand-secondary font-semibold"
               />
               <Button
                 text="Linkedin"
                 link={
-                  "https://www.linkedin.com/in/guilherme-cesário-b5138221a/"
+                  'https://www.linkedin.com/in/guilherme-cesário-b5138221a/'
                 }
                 containerStyle="font-semibold"
               />
@@ -58,28 +58,28 @@ export default function Home() {
             <div className="flex flex-col">
               <SectionTitle>Sobre mim</SectionTitle>
               <p>
-                Sou desenvolvedor com experiência em{" "}
+                Sou desenvolvedor com experiência em{' '}
                 <span className="font-bold text-brand">
                   aplicações web, mobile, back-end e desenvolvimento de jogos
                 </span>
-                . Gosto de transformar ideias em{" "}
+                . Gosto de transformar ideias em{' '}
                 <span className="font-bold text-brand">
                   soluções funcionais
                 </span>
-                , buscando escrever código{" "}
+                , buscando escrever código{' '}
                 <span className="font-bold text-brand">
                   organizado, escalável e fácil de manter
                 </span>
-                . Minha experiência em{" "}
+                . Minha experiência em{' '}
                 <span className="font-bold text-brand">
                   projetos colaborativos
-                </span>{" "}
-                também me permitiu desenvolver habilidades de{" "}
+                </span>{' '}
+                também me permitiu desenvolver habilidades de{' '}
                 <span className="font-bold text-brand">
                   comunicação, organização e trabalho em equipe
                 </span>
                 . Atualmente, busco continuar evoluindo tecnicamente enquanto
-                participo de projetos que me permitam{" "}
+                participo de projetos que me permitam{' '}
                 <span className="font-bold text-brand">
                   aprender e criar soluções relevantes
                 </span>
@@ -98,7 +98,7 @@ export default function Home() {
                 aria-label="Redes sociais"
                 className="flex items-center justify-center gap-3.5"
               >
-                <Link target="_blank" href={"https://github.com/Gu1san"}>
+                <Link target="_blank" href={'https://github.com/Gu1san'}>
                   <GitHubIcon
                     className="text-foreground-muted hover:text-brand-hover transition-all"
                     sx={{ fontSize: 29 }}
@@ -107,7 +107,7 @@ export default function Home() {
                 <Link
                   target="_blank"
                   href={
-                    "https://www.linkedin.com/in/guilherme-cesário-b5138221a/"
+                    'https://www.linkedin.com/in/guilherme-cesário-b5138221a/'
                   }
                 >
                   <LinkedInIcon
