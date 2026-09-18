@@ -26,9 +26,7 @@ export default function Header() {
           className="flex items-center justify-between cursor-pointer"
         >
           <span className="sr-only">Guilherme Logo</span>
-          <span className="text-brand-secondary font-bold font-">
-            Guilherme
-          </span>
+          <span className="text-brand-secondary font-bold text-xl">GC</span>
         </Link>
         <div className="flex lg:hidden">
           <button
