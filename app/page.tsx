@@ -105,7 +105,7 @@ export default function Home() {
                 containerStyle="items-center justify-start px-2.5 w-10 gap-2.5"
               />
             </div>
-            <div className=" flex flex-col gap-2.5 ml-7 w-1/2 sm:w-1/3 md:min-w-3xs h-full">
+            <div className="flex flex-col gap-2.5 ml-7 w-full md:w-1/2 sm:w-1/2 md:min-w-3xs h-full">
               <AboutTerminal />
             </div>
           </div>
