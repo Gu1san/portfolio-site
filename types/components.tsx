@@ -1,11 +1,13 @@
-import { IconType } from "@icons-pack/react-simple-icons";
-import { Url } from "next/dist/shared/lib/router/router";
+import { IconType } from '@icons-pack/react-simple-icons';
+import { Url } from 'next/dist/shared/lib/router/router';
+import { ReactNode } from 'react';
 
 export type ButtonProps = {
   link: Url | string;
   text: string;
-  textStyle?: string;
   containerStyle?: string;
+  transparent?: boolean;
+  icon?: ReactNode;
 };
 
 export type Technologies = {
@@ -22,7 +24,7 @@ export type Project = {
   image: string;
   repository: string;
   deploy?: string;
-  technologies: Technologies["id"][];
+  technologies: Technologies['id'][];
 };
 
 export type Job = {
@@ -30,7 +32,7 @@ export type Job = {
   company: string;
   role: string;
   start_date: Date;
-  end_date: Date | "Atualmente";
+  end_date: Date | 'Atualmente';
   topics: string[];
 };
 
@@ -40,5 +42,5 @@ export type Education = {
   institution: string;
   description: string;
   start_date: Date;
-  end_date: Date | "Atualmente";
+  end_date: Date | 'Atualmente';
 };

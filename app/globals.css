@@ -1,11 +1,13 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
   /* ========================================
      BACKGROUNDS
      ======================================== */
 
-  --background: #f3f3f3;
+  --background: #f0f0f0;
   --background-secondary: #e7e7e7;
   --background-tertiary: #d8d8d8;
 
@@ -28,13 +30,14 @@
      BRAND
      ======================================== */
 
-  --brand: #0066ff;
-  --brand-hover: #0052cc;
-  --brand-active: #003d99;
+  --brand: #00774d;
+  --brand-muted: #00ffa6;
+  --brand-secondary-hover: #00b475;
+  --brand-secondary-active: #00b475;
+  --brand-secondary-background: #00b475;
 
-  --brand-secondary: #4d94ff;
-  --brand-muted: #cce0ff;
-  --brand-background: #e5f0ff;
+  --brand-secondary: #0044ff;
+  --brand-secondary-muted: #0027a8;
 }
 
 @theme inline {
@@ -70,6 +73,7 @@
   --color-brand-active: var(--brand-active);
 
   --color-brand-secondary: var(--brand-secondary);
+  --color-brand-secondary-muted: var(--brand-secondary-muted);
   --color-brand-muted: var(--brand-muted);
   --color-brand-background: var(--brand-background);
 
@@ -110,13 +114,14 @@
        BRAND
        ======================================== */
 
-    --brand: #3385ff;
+    --brand: #486aff;
     --brand-hover: #66a3ff;
     --brand-active: #99c2ff;
-
-    --brand-secondary: #0066ff;
-    --brand-muted: #003d99;
+    --brand-muted: #012fff;
     --brand-background: #001433;
+
+    --brand-secondary: #00ffa6;
+    --brand-secondary-muted: #00b475;
   }
 }
 
@@ -124,4 +129,19 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+.animate-float {
+  animation: float 3.5s ease-in-out infinite;
 }

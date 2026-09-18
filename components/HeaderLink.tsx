@@ -1,11 +1,11 @@
-import { ButtonProps } from "@/types/components";
-import Link from "next/link";
+import { ButtonProps } from '@/types/components';
+import Link from 'next/link';
 
 export default function HeaderLink({ link, text }: ButtonProps) {
   return (
     <Link
       href={link}
-      className="transparent rounded-xl py-1 px-2 font-semibold hover:bg-brand transition"
+      className="transparent rounded-xl py-1 px-2 font-semibold hover:text-brand-secondary transition"
     >
       {text}
     </Link>

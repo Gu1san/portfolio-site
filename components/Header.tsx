@@ -1,7 +1,7 @@
-"use client";
-import { useState } from "react";
-import HeaderLink from "./HeaderLink";
-import { ChevronDown, MenuIcon, X } from "lucide-react";
+'use client';
+import { useState } from 'react';
+import HeaderLink from './HeaderLink';
+import { ChevronDown, MenuIcon, X } from 'lucide-react';
 import {
   Dialog,
   DialogPanel,
@@ -12,21 +12,23 @@ import {
   PopoverButton,
   PopoverGroup,
   PopoverPanel,
-} from "@headlessui/react";
-import DialogButton from "./DialogButton";
-import Link from "next/link";
+} from '@headlessui/react';
+import DialogButton from './DialogButton';
+import Link from 'next/link';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
-    <header className="fixed top-0 backdrop-blur-md z-50 self-center lg:top-3.5 flex flex-row justify-between align-center bg-background-tertiary/55 border-b lg:border border-brand lg:rounded-3xl w-full lg:w-2/3 max-h-16 py-4 px-3">
+    <header className="fixed top-0 left-0 backdrop-blur-md z-50 self-center flex flex-row justify-between align-center bg-background-tertiary/55 w-full py-4 px-3 lg:px-31">
       <nav className="flex flex-1 flex-row justify-between gap-3">
         <Link
           href="#"
           className="flex items-center justify-between cursor-pointer"
         >
           <span className="sr-only">Guilherme Logo</span>
-          <span className="text-brand font-bold text-4xl">GC</span>
+          <span className="text-brand-secondary font-bold font-">
+            Guilherme
+          </span>
         </Link>
         <div className="flex lg:hidden">
           <button
@@ -39,12 +41,12 @@ export default function Header() {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-5">
-          <HeaderLink link={"#"} text="Início" />
-          <HeaderLink link={"#about"} text="Sobre" />
-          <HeaderLink link={"#technologies"} text="Tecnologias" />
-          <HeaderLink link={"#projects"} text="Projetos" />
+          <HeaderLink link={'#'} text="Início" />
+          <HeaderLink link={'#about'} text="Sobre" />
+          <HeaderLink link={'#technologies'} text="Tecnologias" />
+          <HeaderLink link={'#projects'} text="Projetos" />
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 font-semibold transparent rounded-xl py-1 px-2 hover:bg-brand  transition">
+            <PopoverButton className="flex items-center gap-x-1 font-semibold transparent rounded-xl py-1 px-2 hover:text-brand-secondary  transition">
               Experiências
               <ChevronDown aria-hidden="true" className="size-5 flex-none" />
             </PopoverButton>
@@ -53,8 +55,8 @@ export default function Header() {
               transition
               className="absolute flex flex-col left-1/2 z-10 gap-2 p-2.5 mt-5 max-w-md -translate-x-1/2 overflow-hidden rounded-2xl bg-background-secondary outline-1 -outline-offset-1 outline-white/10 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
             >
-              <HeaderLink link={"#experiences"} text="Profissional" />
-              <HeaderLink link={"#education"} text="Acadêmico" />
+              <HeaderLink link={'#experiences'} text="Profissional" />
+              <HeaderLink link={'#education'} text="Acadêmico" />
             </PopoverPanel>
           </Popover>
         </PopoverGroup>
@@ -69,7 +71,9 @@ export default function Header() {
           <div className="flex items-center justify-between">
             <Link href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Guilherme Logo</span>
-              <span className="text-brand font-bold text-4xl">GC</span>
+              <span className="text-brand-secondary font-bold text-xl">
+                Guilherme
+              </span>
             </Link>
             <button
               type="button"
@@ -99,14 +103,14 @@ export default function Header() {
                   <DisclosurePanel className="mt-2 space-y-2">
                     <DisclosureButton
                       as="a"
-                      href={"#experiences"}
+                      href={'#experiences'}
                       className="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-foreground hover:bg-hover"
                     >
                       Profissional
                     </DisclosureButton>
                     <DisclosureButton
                       as="a"
-                      href={"#education"}
+                      href={'#education'}
                       className="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-foreground hover:bg-hover"
                     >
                       Acadêmico
